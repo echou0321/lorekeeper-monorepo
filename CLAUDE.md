@@ -113,6 +113,30 @@ DATABASE_URL=          # Supabase Postgres connection string (for direct psycopg
 FANDOM_SLUG=one-piece
 ```
 
+## Build Progress
+
+### Week 1 — Corpus & Ingestion
+- [x] `db/schema.sql` — all tables, indexes, One Piece arc seed data
+- [x] Schema applied to Supabase (pgvector enabled, fandoms + arcs verified)
+- [x] `ingestion/` pipeline scaffolded — fetch, parse, tag, chunk, embed, store
+- [ ] Single test page verified end-to-end (Marineford Arc → chunks in DB)
+- [ ] Full scrape across arc, character, devil fruit pages
+- [ ] Chunk count target: 5,000–15,000
+
+### Week 2 — API
+- [ ] FastAPI app scaffolded
+- [ ] `/query` endpoint with spoiler-gated retrieval
+- [ ] Auth endpoints (Supabase delegation)
+- [ ] `/user/progress` endpoint
+- [ ] Streaming verified via curl
+
+### Week 3 — Frontend
+- [ ] Next.js app scaffolded
+- [ ] Arc selector + query UI
+- [ ] Deployed to Vercel
+
+---
+
 ## What We Are NOT Doing (yet)
 
 - No LangChain — retrieval pipeline is hand-rolled for full control and interview explainability

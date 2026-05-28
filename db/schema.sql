@@ -1,6 +1,8 @@
 -- Lorekeeper Database Schema
--- Run once on Supabase. pgvector is pre-enabled — no CREATE EXTENSION needed.
+-- Run once on Supabase.
 -- auth.users is managed by Supabase Auth. Do not create a users table.
+
+CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA extensions;
 
 -- ============================================================
 -- FANDOMS
